@@ -3,4 +3,8 @@
 Ainda em construção.
 
 Falta:
-Wallpapers, Rofi...
+Colocar as regras, Wallpapers, Rofi, kitty, shell...
+
+```shell
+sudo pacman -S hyprlock hypridle
+```
