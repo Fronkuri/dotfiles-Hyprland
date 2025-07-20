@@ -13,8 +13,8 @@ button {
     margin: 4px;
     border-radius: 25px;
     border-color: rgba(0,0,0,0);
-	text-decoration-color: rgb(217, 111, 50, 0);
-    color: rgb(217, 111, 50, 0);
+	text-decoration-color: rgba(217, 111, 50, 0);
+    color: rgba(217, 111, 50, 0);
 	background-color: rgba(0,0,0,0.2);
 	border-style: solid;
 	border-width: 0px;
@@ -25,7 +25,7 @@ button {
 
 button:hover {
         background-size: 25%;
-	background-color: rgb(153, 41, 234, 0);
+	background-color: rgba(153, 41, 234, 0);
 	outline-style: none;
 }
 
