@@ -54,6 +54,3 @@ done
 # Apply wallpaper via IPC
 hyprctl hyprpaper preload "$WALLPAPER"
 hyprctl hyprpaper wallpaper "$MONITOR,$WALLPAPER"
-
-# Relaunch themed overlays (optional)
-pkill cava && /home/AMBHI/.config/hypr/scripts/cava.sh
