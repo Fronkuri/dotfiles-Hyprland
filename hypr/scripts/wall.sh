@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-WALLPAPER_DIR="/media/winD/Wallpaper/"
+WALLPAPER_DIR="~/Pictures/hyprWallpapers/"
 MONITOR="eDP-1"
 WALL_LIST="$HOME/.cache/wallpapers.list"
 LAST_USED="$HOME/.cache/last_wallpaper.txt"
