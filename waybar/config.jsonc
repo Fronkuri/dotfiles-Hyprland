@@ -21,11 +21,12 @@
         "tray",
 		"backlight",
 		"pulseaudio",
-        "network",
-        "cpu",
-        "memory",
-        "temperature",
         "battery",
+        "network",
+        //"cpu",
+		"custom/cpuinfo",
+        "memory",
+        //"temperature",
         "custom/power"
     ],
     // Modules configuration
@@ -215,5 +216,14 @@
         "icon-size" : 10,
 		"tooltip": true,
         "on-click" : "wlogout"
-    }
+    },
+	"custom/cpuinfo": {
+        "exec": " cpuinfo.sh",
+        "return-type": "json",
+        "format": "{}",
+        "interval": 5, // once every 5 seconds
+        "tooltip": true,
+        "max-length": 1000
+    },
+
 }
