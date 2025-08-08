@@ -14,12 +14,13 @@
     ],
     "modules-center": [
         "idle_inhibitor",
-	"clock",
+		"clock" //,
+		//"weather"
     ],
     "modules-right": [
         "tray",
-	"backlight",
-	"pulseaudio",
+		"backlight",
+		"pulseaudio",
         "network",
         "cpu",
         "memory",
@@ -28,18 +29,17 @@
         "custom/power"
     ],
     // Modules configuration
-    "hyprland/workspaces": {
-         "disable-scroll": true,
-         "all-outputs": true,
-         "warp-on-scroll": false,
-         "format": " {icon}",
-         "format-iconzs": {
-         "urgent": "",
-         "active": "",
-         "default": ""
-         }
-     },
-
+	"hyprland/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "active-only": false,
+        "on-click": "activate",
+        "disable-scroll": false,
+        "on-scroll-up": "hyprctl dispatch workspace -1",
+        "on-scroll-down": "hyprctl dispatch workspace +1",
+        "persistent-workspaces": {
+        }
+    },
     "keyboard-state": {
         "numlock": true,
         "capslock": true,
@@ -48,16 +48,6 @@
             "locked": "",
             "unlocked": ""
         }
-    },
-    "sway/mode": {
-        "format": "<span style=\"italic\">{}</span>"
-    },
-    "sway/scratchpad": {
-        "format": "{icon} {count}",
-        "show-empty": false,
-        "format-icons": ["", ""],
-        "tooltip": true,
-        "tooltip-format": "{app}: {title}"
     },
     "mpd": {
         "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
@@ -85,12 +75,14 @@
         "tooltip-format": "MPD (connected)",
         "tooltip-format-disconnected": "MPD (disconnected)"
     },
-    "idle_inhibitor": {
+	"idle_inhibitor": {
         "format": "{icon}",
         "format-icons": {
-            "activated": "",
-            "deactivated": ""
-        }
+            "activated": "󰅶 ",
+            "deactivated": "󰛊 "
+        },
+        "tooltip-format-activated":"Caffeine Mode Active",
+        "tooltip-format-deactivated":"Caffeine Mode Inactive"
     },
     "tray": {
         // "icon-size": 21,
@@ -101,11 +93,27 @@
         // }
     },
     "clock": {
-        "format": "{:%R }",
-        // "timezone": "America/New_York",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%d-%m-%Y}",
-        "on-click-right" : "~/.config/waybar/scripts/clock.sh",
+        "format": "{:%H:%M 󰃭 %d %b}",
+        "format-alt": "{:%H:%M:%S 󰃭 %d/%m/%y}",
+        "tooltip-format": "<span>{calendar}</span>",
+        "calendar": {
+            "mode": "month",
+            "mode-mon-col": 3,
+            "on-scroll": 1,
+            "on-click-right": "mode",
+            "format": {
+                "months": "<span color='#ffead3'><b>{}</b></span>",
+                "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+                "today": "<span color='#ff6699'><b>{}</b></span>"
+            }
+        },
+        "actions": {
+            "on-click-right": "mode",
+            "on-click-forward": "tz_up",
+            "on-click-backward": "tz_down",
+            "on-scroll-up": "shift_up",
+            "on-scroll-down": "shift_down"
+        }
     },
     "cpu": {
         "interval": 10,
@@ -177,12 +185,12 @@
         "format-bluetooth": "{volume}% {icon} {format_source}",
         "format-bluetooth-muted": " {icon} {format_source}",
         "format-muted": " {format_source}",
-        "format-source": "{volume}% ",
+        "format-source": " {volume}%",
         "format-source-muted": "",
         "format-icons": {
             "headphone": "",
-            "hands-free": "",
-            "headset": "",
+            "hands-free": "",
+            "headset": "",
             "phone": "",
             "portable": "",
             "car": "",
@@ -205,7 +213,7 @@
     "custom/power": {
         "format" : " ⏻ ",
         "icon-size" : 10,
-	"tooltip": true,
+		"tooltip": true,
         "on-click" : "wlogout"
     }
 }
