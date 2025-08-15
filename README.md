@@ -6,7 +6,7 @@ Falta:
 Colocar as regras, definir os Wallpapers, Rofi, kitty, shell...
 
 ```shell
-sudo pacman -S hyprlock hyprpicker hyprshot hypridle ghostty fish flatpak steam 
+sudo pacman -S swww hyprlock hyprpicker hyprshot hypridle ghostty fish flatpak steam 
 ```
 
 Instalando outros pacotes úteis para o uso diário pós uma instalação feita pelo archinstall.
