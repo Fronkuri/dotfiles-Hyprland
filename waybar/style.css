@@ -1,3 +1,8 @@
+@define-color main-bg  #7f55b1;
+@define-color main-bg2 #9B7EBD;
+@define-color clr-button-bg #F49BAB;
+@define-color clr-button #FFE1E0;
+
 window#waybar {
     font-family: "JetBrains Mono NerdFont";
     background-color: rgba(0, 0, 0, 0);
@@ -12,19 +17,19 @@ tooltip {
 }
 
 .modules-left {
-    background: linear-gradient(315deg, rgba(145, 0, 135, 0.4), rgba(79, 0, 116, 0.6));
+    background: @main-bg;
     border-radius: 10px;
     padding: 3px;
 }
 
 .modules-center {
-    background: linear-gradient(180deg, rgba(145, 0, 135, 0.4), rgba(79, 0, 116, 0.6));
+    background: @main-bg;
     border-radius: 10px;
     padding: 3px;
 }
 
 .modules-right {
-    background: linear-gradient(45deg, rgba(145, 0, 135, 0.4), rgba(79, 0, 116, 0.6));
+    background: @main-bg;
     border-radius: 10px;
     padding: 3px;
 }
@@ -34,19 +39,18 @@ tooltip {
 #image.powermenu {
     background-color: rgba(0, 0, 0, 0.3);
     border-radius: 7px;
-    padding: 0px 10px;
+    padding: 0px 5px;
     border-left: 10px;
 }
 
 
 #workspaces {
-    background-color: rgba(0, 0, 0, 0.4);
     border-radius: 7px;
     padding: 0 5px;
 }
 
 #workspaces button {
-    color: rgb(136, 136, 136);
+    color: @clr-button;
     font-size: 1.2rem;
     padding: 0 0.3rem 0 0;
 }
@@ -61,7 +65,8 @@ tooltip {
 }
 
 #workspaces button.active {
-    color: #a752df;
+    background-color: @clr-button-bg;
+    color: @clr-button;
 }
 
 #workspaces button.urgent {
@@ -95,7 +100,7 @@ tooltip {
 #tray {
     background-color: rgba(0, 0, 0, 0.118);
     border-radius: 10px;
-    padding: 2px 5px;
+    padding: 1px 5px;
 }
 
 #clock.time, #clock.date {
@@ -104,8 +109,8 @@ tooltip {
 }
 
 #custom-audiooutputtoggle, #wireplumber, #custom-lights, #network, #custom-lightdarkmode {
-    margin-left: 6px;
-    margin-right: 6px;
+    margin-left: 3px;
+    margin-right: 3px;
 }
 
 #custom-buttonspace {
@@ -131,12 +136,13 @@ tooltip {
 }
 
 #network {
-    padding-right: 8px;
+    padding: 0 3px;
 }
 
 
 #battery {
     color: lightgreen;
+    padding: 0 3px
 }
 
 #memory {
@@ -153,4 +159,11 @@ tooltip {
 
 #temperature {
     color: lightslategray;
+}
+
+#custom-notification {
+  font-family: "JetBrains Nerd Font";
+  padding: 0 0px;
+  font-size: 25px;
+  color: @clr-button;
 }
