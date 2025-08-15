@@ -3,9 +3,10 @@
 import os 
 import random
 
+directory = '/home/fronkuri/.config/fastfetch/logo/'
 r = []
 
-for i in os.listdir('/home/fronkuri/Pictures/logo/'):
+for i in os.listdir(directory):
     r.append(i)
 
-print ('/home/fronkuri/Pictures/logo/'+random.choice(r)) 
+print (directory+random.choice(r)) 
