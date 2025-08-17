@@ -53,7 +53,7 @@ imagebox {
     padding:                     10px;
     border-radius:               15px;
     background-color:            transparent;
-    background-image:            url("~/.config/swww/wallpaper.jpg", height);
+    background-image:            url("~/.config/swww/wallpaper.png", height);
     orientation:                 vertical;
     children:                    [ "inputbar", "dummy", "mode-switcher" ];
 }
