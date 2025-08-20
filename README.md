@@ -12,4 +12,4 @@ Instalando outros pacotes úteis para o uso diário pós uma instalação feita 
 sudo pacman -S mpd unrar unzip texlive texstudio yt-dlp gwenview okular zapzap thunderbird anki telegram stremio missioncenter htop
 ```
 Falta:
-temas GTK/qt6 para aplicações gnome e kde, lembrar de montar o segundo SSD após inicio.
+Temas GTK/qt6 para aplicações gnome e kde, lembrar de montar o segundo SSD após inicio, trocar o horário para en_US também.
