@@ -15,6 +15,10 @@ rode esses comandos:
 ```shell
 XDG_MENU_PREFIX=arch- kbuildsycoca6
 ```
+```shell
+# File association in dolphin.
+env = XDG_MENU_PREFIX,plasma-
+```
 
 Falta:
 zapzap, thunderbird, anki, telegram, stremio, missioncenter,Temas GTK/qt6 para aplicações gnome e kde, lembrar de montar o segundo SSD após inicio, trocar o horário para en_US também.
