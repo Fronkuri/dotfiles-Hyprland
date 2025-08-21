@@ -4,7 +4,7 @@ Ainda em construção.
 
 Instalar dependencias das configs
 ```shell
-sudo pacman -S swww hyprlock hyprpicker hyprshot hypridle xdg-desktop-portal-gtk xdg-desktop-portal-hyprland ghostty fish flatpak steam ttf-jetbrains-mono-nerd ttf-fira-code ttf-liberation-mono-nerd
+sudo pacman -S swww hyprlock hyprpicker hyprshot hypridle xdg-desktop-portal-gtk xdg-desktop-portal-hyprland ghostty fish flatpak ttf-jetbrains-mono-nerd ttf-fira-code ttf-liberation-mono-nerd
 ```
 
 Instalando outros pacotes úteis para o uso diário pós uma instalação feita pelo archinstall.
