@@ -95,7 +95,7 @@
         // }
     },
     "clock": {
-        "format": "{:%H:%M 󰃭 %b %d}",
+        "format": "{:%H:%M 󰃭%A, %b %d}",
         "format-alt": "{:%H:%M:%S 󰃭 %d/%m/%y}",
         "tooltip-format": "<span>{calendar}</span>",
         "calendar": {
@@ -180,6 +180,7 @@
         "tooltip-format-disconnected": "Disconnected",
         "format-alt": "<span foreground='#99ffdd'> {bandwidthDownBytes}</span> <span foreground='#ffcc66'> {bandwidthUpBytes}</span>",
         "interval": 2,
+		"on-click-right": "kitty --class nmtui -e nmtui"
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
