@@ -11,5 +11,10 @@ Instalando outros pacotes úteis para o uso diário pós uma instalação feita 
 ```shell
 sudo pacman -S mpd unrar unzip texlive texstudio yt-dlp gwenview okular htop  xdg-desktop-portal-gtk xdg-desktop-portal-hyprland
 ```
+rode esses comandos:
+```shell
+XDG_MENU_PREFIX=arch- kbuildsycoca6
+```
+
 Falta:
 zapzap, thunderbird, anki, telegram, stremio, missioncenter,Temas GTK/qt6 para aplicações gnome e kde, lembrar de montar o segundo SSD após inicio, trocar o horário para en_US também.
