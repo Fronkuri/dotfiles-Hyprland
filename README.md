@@ -4,7 +4,7 @@ Ainda em construção.
 
 Instalar dependencias das configs
 ```shell
-sudo pacman -S waybar swww hyprlock hyprpicker hyprshot archlinux-xdg-menu hypridle ghostty fish flatpak ttf-jetbrains-mono-nerd ttf-fira-code ttf-liberation-mono-nerd
+sudo pacman -S waybar swww hyprlock hyprpicker hyprshot archlinux-xdg-menu hypridle ghostty fish flatpak ttf-jetbrains-mono-nerd ttf-fira-code ttf-liberation-mono-nerd noto-fonts-cjk
 ```
 
 Instalando outros pacotes úteis para o uso diário pós uma instalação feita pelo archinstall.
