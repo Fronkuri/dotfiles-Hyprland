@@ -13,21 +13,21 @@
         //"custom/media"
     ],
     "modules-center": [
-        "idle_inhibitor",
-		"clock" //,
+		    "clock" //,
 		//"weather"
     ],
     "modules-right": [
         "tray",
-		"memory",
-		"backlight",
-		"pulseaudio",
-        "battery",
-        //"network"
+        "idle_inhibitor",
+		    "memory",
+		    "backlight",
+		    "pulseaudio",
         //"cpu",
-		//"custom/cpuinfo",
+		    //"custom/cpuinfo",
         //"temperature",
-		"custom/notification",
+        "network",
+        "battery",
+		    "custom/notification",
         "custom/power"
     ],
     // Modules configuration
@@ -95,8 +95,8 @@
         // }
     },
     "clock": {
-        "format": "{:%H:%M 󰃭%A, %b %d}",
-        "format-alt": "{:%H:%M:%S 󰃭 %d/%m/%y}",
+        "format": "󰥔 {:%H:%M 󰃭 %A, %b %d}",
+        "format-alt": "󰥔 {:%H:%M:%S 󰃭 %d/%m/%y}",
         "tooltip-format": "<span>{calendar}</span>",
         "calendar": {
             "mode": "month",
@@ -130,9 +130,9 @@
     "temperature": {
         // "thermal-zone": 2,
         // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
-        "critical-threshold": 80,
-        // "format-critical": "{icon} {temperatureC}°C",
+        "critical-threshold": 75,
         "format": "{icon} {temperatureC}°C",
+        // "format-critical": "{icon} {temperatureC}°C",
         "format-icons": ["", "", ""]
     },
     "backlight": {
@@ -144,16 +144,16 @@
         "states": {
             "good": 95,
             "warning": 30,
-            "critical": 15
+            "critical": 20
         },
-        "format": "{icon} {capacity}% ",
-        "format-full": "{icon} {capacity}% ",
-        "format-charging": " {capacity}% ",
-        "format-plugged": " {capacity}% ",
-        "format-alt": "{icon} {time} ",
+        "format": "{icon} ",
+        "format-charging": " {capacity}%",
+        "format-plugged": " {capacity}%",
+        "format-alt": "{icon} {capacity}% ",
+        "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
         // "format-good": "", // An empty format will hide the module
         // "format-full": "",
-        "format-icons": ["", "", "", "", ""]
+    //
     },
     "battery#bat2": {
         "bat": "BAT2"
@@ -171,23 +171,24 @@
     },
     "network": {
         "tooltip": true,
-        "format-wifi": " ",
+        "format-icons": ["󰤯","󰤟","󰤢","󰤥","󰤨"],
+        "format" : "{icon} ",
+        "format-wifi" : "{icon} ",
         //"rotate": ${r_deg},
         "format-ethernet": "󰈀 ",
-        "tooltip-format": "Network: <big><b>{essid}</b></big>\nSignal strength: <b>{signaldBm}dBm ({signalStrength}%)</b>\nFrequency: <b>{frequency}MHz</b>\nInterface: <b>{ifname}</b>\nIP: <b>{ipaddr}/{cidr}</b>\nGateway: <b>{gwaddr}</b>\nNetmask: <b>{netmask}</b>",
+        "tooltip-format": "Network: <big><b>{essid}</b></big>\nSignal strength: <b>{signaldBm}dBm ({signalStrength}%)</b>\nFrequency: <b>{frequency}MHz</b>\nInterface: <b>{ifname}</b>\nIP: <b>{ipaddr}/{cidr}</b>\nGateway: <b>{gwaddr}</b>\nNetmask: <b>{netmask}</b>\n<span foreground='#99ffdd'> {bandwidthDownBytes}</span>\n<span foreground='#ffcc66'> {bandwidthUpBytes}</span>",
         "format-linked": "󰈀 {ifname} (No IP)",
-        "format-disconnected": "󰖪 ",
+        "format-disconnected": "󰤠 ",
         "tooltip-format-disconnected": "Disconnected",
-        "format-alt": "<span foreground='#99ffdd'> {bandwidthDownBytes}</span> <span foreground='#ffcc66'> {bandwidthUpBytes}</span>",
         "interval": 2,
-		"on-click-right": "kitty --class nmtui -e nmtui"
+        "on-click": "kitty --class nmtui -e nmtui",
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
         "format": "{icon} {volume}% {format_source}",
-        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format-bluetooth": "{icon} {volume}% {format_source}",
         "format-bluetooth-muted": " {icon} {format_source}",
-        "format-muted": " {format_source}",
+        "format-muted": " {format_source}",
         "format-source": " {volume}%",
         "format-source-muted": "",
         "format-icons": {
@@ -214,7 +215,7 @@
         // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
     },
     "custom/power": {
-        "format" : " ⏻ ",
+        "format" : "⏻ ",
         "icon-size" : 10,
 		"tooltip": true,
         "on-click" : "wlogout"
@@ -232,13 +233,14 @@
     "format": "{icon}",
     "format-icons": {
       "notification": "<span foreground='red'><sup></sup></span>",
-      "none": "",
+      "none": " ",
+      // 
       "dnd-notification": "<span foreground='red'><sup></sup></span>",
-      "dnd-none": "",
+      "dnd-none": " ",
       "inhibited-notification": "<span foreground='red'><sup></sup></span>",
-      "inhibited-none": "",
+      "inhibited-none": " ",
       "dnd-inhibited-notification": "<span foreground='red'><sup></sup></span>",
-      "dnd-inhibited-none": ""
+      "dnd-inhibited-none": " "
     },
     "return-type": "json",
     "exec-if": "which swaync-client",
@@ -247,5 +249,16 @@
     "on-click-right": "swaync-client -d -sw",
     "escape": true
   },
+
+    "bluetooth": {
+        "format": "",
+        "format-connected": " {device_alias}",
+        "format-connected-battery": " {device_alias} {device_battery_percentage}%",
+        "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
+        "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
+        "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+        "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%",
+        "on-click": "rfkill toggle bluetooth" 
+    },
 
 }
