@@ -1,8 +1,14 @@
-@define-color main-bg #090040;
+/*@define-color main-bg #090040;
 @define-color main-bg2 #471396;
 @define-color clr-button-bg #F49BAB;
 @define-color clr-button-inactive #7f55b1;
-@define-color clr-button #FFE1E0;
+@define-color clr-button #FFE1E0;*/
+
+@define-color main-bg #000000;
+@define-color main-bg2 #9929EA;
+@define-color clr-button-bg #FF5FCF;
+@define-color clr-button-inactive #9929EA;
+@define-color clr-button #00F7FF;
 
 window#waybar {
     font-family: "JetBrains Mono NerdFont";
@@ -14,7 +20,7 @@ window#waybar {
 
 tooltip {
     font-family: "JetBrains Mono NerdFont";
-    font-size: 0.8rem;
+    font-size: 1rem;
 }
 
 .modules-left {
@@ -35,13 +41,11 @@ tooltip {
     padding: 3px;
 }
 
-
-
-#image.powermenu {
-    background-color: rgba(0, 0, 0, 0.3);
-    border-radius: 5px;
-    padding: 0px 3px;
-    border-left: 5px;
+#custom-power {
+    color: rgba(255, 0, 76, 1);
+    border-radius: 3px;
+    padding: 0 0 0 4px;
+    border-left: 2px;
 }
 
 
@@ -136,13 +140,16 @@ tooltip {
 }
 
 #network {
-    padding: 0 3px;
+    color: #007fff;
+    font-size: 20px;
+    padding: 0px;
 }
 
 
 #battery {
     color: lightgreen;
-    padding: 0 3px
+    font-size: 18px;
+    padding: 0 4px;
 }
 
 #memory {
@@ -163,7 +170,7 @@ tooltip {
 
 #custom-notification {
   font-family: "Liberation Nerd Font";
-  padding: 0 0px;
-  font-size: 25px;
+  padding: 0 5px;
+  font-size: 20px;
   color: @clr-button;
 }
