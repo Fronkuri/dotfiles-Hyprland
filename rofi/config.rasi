@@ -3,12 +3,12 @@
 // Github: @adi1090x
 
 configuration {
-	modi:                       "drun,run,filebrowser,window";
+	modi:                       "drun,run,window";
     show-icons:                 true;
-    display-drun:               "APPS";
-    display-run:                "RUN";
-    display-filebrowser:        "FILES";
-    display-window:             "WINDOW";
+    display-drun:               "󰀻";
+    display-run:                "";
+    //display-filebrowser:        "";
+    display-window:             "";
 	drun-display-format:        "{name}";
 	window-format:              "{w} · {c} · {t}";
 }
@@ -29,7 +29,7 @@ window {
     location:                    center;
     anchor:                      center;
     fullscreen:                  false;
-    width:                       1100px;
+    width:                       1200px;
     //height:                      720px;
     x-offset:                    0px;
     y-offset:                    0px;
@@ -38,19 +38,20 @@ window {
     enabled:                     true;
     border-radius:               15px;
     cursor:                      "default";
+    border-color:                @background;
     background-color:            @background;
 }
 
 mainbox {
     enabled:                     true;
-    spacing:                     0px;
     background-color:            transparent;
     orientation:                 horizontal;
     children:                    [ "imagebox", "listbox" ];
+    padding:                     0 -350 0 0px;
 }
 
 imagebox {
-    padding:                     10px;
+    padding:                     15px;
     border-radius:               15px;
     background-color:            transparent;
     background-image:            url("~/.config/swww/wallpaper.png", height);
@@ -59,8 +60,8 @@ imagebox {
 }
 
 listbox {
-    spacing:                     20px;
-    padding:                     20px;
+    spacing:                     200px;
+    padding:                     20 370 20 20px;
     background-color:            transparent;
     orientation:                 vertical;
     children:                    [ "message", "listview" ];
@@ -73,7 +74,7 @@ dummy {
 inputbar {
     enabled:                     true;
     spacing:                     5px;
-    padding:                     15px;
+    padding:                     10px;
     border-radius:               10px;
     background-color:            @background-alt;
     text-color:                  @foreground;
