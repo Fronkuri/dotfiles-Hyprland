@@ -3,7 +3,7 @@
 Ainda em construção.
 Instalar dependencias das configs + uso diário.
 ```shell
-sudo pacman -S git waybar rofi awww hyprlock hyprpicker hyprshot archlinux-xdg-menu hypridle ghostty fish flatpak ttf-jetbrains-mono-nerd ttf-fira-code ttf-liberation-mono-nerd noto-fonts-cjk brightnessctl gnome-calculator mpd unrar unzip fastfetch htop gwenview okular yt-dlp mission-center xdg-desktop-portal-gtk xdg-desktop-portal-hyprland texlive texstudio biber texlive-langportuguese kde-cli-tools anki
+sudo pacman -S git noctalia waybar rofi awww hyprlock hyprpicker hyprshot archlinux-xdg-menu hypridle ghostty fish flatpak ttf-jetbrains-mono-nerd ttf-fira-code ttf-liberation-mono-nerd noto-fonts-cjk brightnessctl gnome-calculator mpd unrar unzip fastfetch htop gwenview okular yt-dlp btop mission-center xdg-desktop-portal-gtk xdg-desktop-portal-hyprland texlive texstudio biber texlive-langportuguese kde-cli-tools anki
 ```
 Arquivo instalador
 
@@ -23,4 +23,4 @@ env = XDG_MENU_PREFIX,plasma-
 ```
 
 Falta:
-stremio, Temas GTK/qt6 para aplicações gnome e kde, lembrar de montar o segundo SSD após inicio, trocar o horário para en_US também.
+Temas GTK/qt6 para aplicações gnome e kde, lembrar de montar o segundo SSD após inicio, trocar o horário para en_US também.
